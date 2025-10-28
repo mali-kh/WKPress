@@ -33,6 +33,7 @@ from kvpress import (
     StreamingLLMPress,
     ThinKPress,
     TOVAPress,
+    WKPress,
 )
 from kvpress.presses.decoding_press import DecodingPress
 
@@ -99,4 +100,5 @@ PRESS_REGISTRY = {
     "decoding_adakv_expected_attention_e2": DecodingPress(base_press=AdaKVPress(ExpectedAttentionPress(epsilon=1e-2))),
     "decoding_adakv_snapkv": DecodingPress(base_press=AdaKVPress(SnapKVPress())),
     "decoding_keydiff": DecodingPress(base_press=KeyDiffPress()),
+    "wkpress": WKPress(),
 }
